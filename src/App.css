@@ -1,4 +1,3 @@
-/* The CSS Template : Eesha*/
 :root {
   --text-primary: #000;
   --bgPrimary: #fff;
@@ -364,7 +363,7 @@ a:hover {
 .crypto-card .crypto-image {
   width: 35px;
 }
-.select-timePeriod {
+.select-timeperiod {
   width: 200px !important;
   margin-top: 20px !important;
 }
