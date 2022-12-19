@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Menu, Typography, Avatar } from 'antd'
 import { Link } from 'react-router-dom';
-import { HomeOutlined, MoneyCollectOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons'
+import { HomeOutlined, MoneyCollectOutlined, FundOutlined, MenuOutlined, BulbOutlined } from '@ant-design/icons'
 
 import icon from '../images/cryptocurrency.png'
 
@@ -39,20 +39,20 @@ const Navbar = () => {
         </Button>
       </div>
       {activeMenu && (
-        <Menu theme='dark'>
-          <Menu.Item icon={<HomeOutlined />}>
-            <Link to='/'>Home</Link>
-          </Menu.Item>
-          <Menu.Item icon={<HomeOutlined />}>
-            <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
-          </Menu.Item>
-          <Menu.Item icon={<FundOutlined />}>
-            <Link to='/exchanges'>Exchanges</Link>
-          </Menu.Item>
-          <Menu.Item icon={<MoneyCollectOutlined />}>
-            <Link to='/news'>News</Link>
-          </Menu.Item>
-        </Menu>
+       <Menu theme="dark">
+       <Menu.Item key="home" icon={<HomeOutlined />}>
+         <Link to="/">Home</Link>
+       </Menu.Item>
+       <Menu.Item key="crypto" icon={<FundOutlined />}>
+         <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+       </Menu.Item>
+       <Menu.Item key="exchange" icon={<MoneyCollectOutlined />}>
+         <Link to="/exchanges">Exchanges</Link>
+       </Menu.Item>
+       <Menu.Item key="news" icon={<BulbOutlined />}>
+         <Link to="/news">News</Link>
+       </Menu.Item>
+     </Menu>
       )}
     </div>
   )
